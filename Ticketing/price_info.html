@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Price Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+      // for open the index site
+      var myUrl;
+        function openSites(url){
+            parent.main.location = url;
+        }
+        function hideSites(){
+            if(!myUrl){
+                parent.location = "index.html";
+            }
+            else{
+                parent.location = myUrl;
+            }
+        }
+
+      function destination(f){
+        if(f.des_menu.selectedIndex == 0) {
+          f.des_text.value="Rp. 250000"
+        }
+        if(f.des_menu.selectedIndex == 1) {
+          f.des_text.value="Rp. 250000";
+        }
+        if(f.des_menu.selectedIndex == 2) {
+          f.des_text.value="Rp. 350000";
+        }
+        if(f.des_menu.selectedIndex == 3) {
+          f.des_text.value="Rp. 350000";
+        }
+        if(f.des_menu.selectedIndex == 4) {
+          f.des_text.value="Rp. 350000";
+        }
+        if(f.des_menu.selectedIndex == 5) {
+          f.des_text.value="Rp. 250000";
+        }
+        if(f.des_menu.selectedIndex == 6) {
+          f.des_text.value="Rp. 450000";
+        }
+        if(f.des_menu.selectedIndex == 7) {
+          f.des_text.value="Rp. 250000";
+        }
+        if(f.des_menu.selectedIndex == 8) {
+          f.des_text.value="Rp. 250000";
+        }
+        if(f.des_menu.selectedIndex == 9) {
+          f.des_text.value="Rp. 450000";
+        }
+      }
+
+      function traveller(f) {
+        if(f.traveller_menu.selectedIndex == 0) {
+          f.traveller_text.value="Rp.100000";
+        }
+        if(f.traveller_menu.selectedIndex == 1) {
+          f.traveller_text.value="Rp.50000";
+        }
+        if(f.traveller_menu.selectedIndex == 2) {
+          f.traveller_text.value="Rp.25000";
+        }
+      }
+
+      function airline(f) {
+        if(f.airline_menu.selectedIndex == 0) {
+          f.airline_text.value="Rp.400000";
+        }
+        if(f.airline_menu.selectedIndex == 1) {
+          f.airline_text.value="Rp.600000";
+        }
+        if(f.airline_menu.selectedIndex == 2) {
+          f.airline_text.value="Rp.700000";
+        }
+        if(f.airline_menu.selectedIndex == 3) {
+          f.airline_text.value="Rp.600000";
+        }
+        if(f.airline_menu.selectedIndex == 4) {
+          f.airline_text.value="Rp.500000";
+        }
+        if(f.airline_menu.selectedIndex == 5) {
+          f.airline_text.value="Rp.500000";
+        }
+      }
+
+      function classes(f) {
+        if(f.class_menu.selectedIndex == 0) {
+          f.class_text.value="Rp.100000";
+        }
+        if(f.class_menu.selectedIndex == 1) {
+          f.class_text.value="Rp.200000";
+        }
+        if(f.class_menu.selectedIndex == 2) {
+          f.class_text.value="Rp.300000";
+        }
+        if(f.class_menu.selectedIndex == 3) {
+          f.class_text.value="Rp.400000";
+        }
+      }
+    </script>
+
+</head>
+<body>
+    <div style="margin-left: 1rem;" class="container">
+        <h1>Pricing Information</h1>
+        <div class="row">
+            <form name="des_form">
+                </br>Choose Destination</br>
+                    <select name="des_menu" onChange="destination(this.form)">
+                        <option name="des_1" value="Jakarta">Jakarta</option>
+                        <option name="des_2" value="Surabaya">Surabaya</option>
+                        <option name="des_3" value="Medan">Medan</option>
+                        <option name="des_4" value="Padang">Padang</option>
+                        <option name="des_5" value="Pekanbaru">Pekanbaru</option>
+                        <option name="des_6" value="Semarang">Semarang</option>
+                        <option name="des_7" value="Pontianak">Pontianak</option>
+                        <option name="des_8" value="Yogyakarta">Yogyakarta</option>
+                        <option name="des_9" value="Bandung">Bandung</option>
+                        <option name="des_10" value="Banda Aceh">Banda Aceh</option>
+                    </select>
+                </br>Destination Price</br>
+                    <input type="text" name="des_text" size=20>
+            </form>
+        </div>
+</br>
+        <div class="row">
+            <form name="traveller_form">
+                </br>Choose Traveller</br>
+                  <select name="traveller_menu" onChange="traveller(this.form)">
+                    <option name="adult" value="adult">Adult</option>
+                    <option name="children" value="children">children</option>
+                    <option name="infant" value="infant">infant</option>
+                  </select>
+                </br>Traveller Price</br>
+                  <input type="text" name="traveller_text" size=20>
+            </form>
+        </div>
+</br>
+        <div class="row">
+            <form name="airline_form">
+                </br>Choose Traveller</br>
+                  <select name="airline_menu" onChange="airline(this.form)">
+                    <option name="Batik Air" value="Batik Air">Batik Air</option>
+                    <option name="Citilink" value="Citilink">Citilink</option>
+                    <option name="Garuda Indonesia" value="Garuda Indonesia">Garuda Indonesia</option>
+                    <option name="Lion Air" value="Lion Air">Lion Air</option>
+                    <option name="Sriwijaya Air" value="Sriwijaya Air">Sriwijaya Air</option>
+                    <option name="Wings Air" value="Wings Air">Wings Air</option>
+                  </select>
+                </br>Traveller Price</br>
+                  <input type="text" name="airline_text" size=20>
+            </form>
+        </div>
+</br>
+        <div class="row">
+            <form name="class_form">
+                </br>Choose Traveller</br>
+                  <select name="class_menu" onChange="classes(this.form)">
+                    <option name="Economy" value="Economy">Economy</option>
+                    <option name="Premium Economy" value="Premium Economy">Premium Economy</option>
+                    <option name="Business" value="Business">Business</option>
+                    <option name="First Class" value="First Class">First Class</option>
+                  </select>
+                </br>Traveller Price</br>
+                  <input type="text" name="class_text" size=20>
+            </form>
+        </div>
+</br>
+        <div class="row">
+          <button id="closeBtn" type="button" class="btn btn-danger" onClick="hideSites();">Close pricing list</button>
+        </div>
+</br>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

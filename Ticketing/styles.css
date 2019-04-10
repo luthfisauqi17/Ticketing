@@ -1,0 +1,30 @@
+/* Javascript */
+.flight_info {
+    margin-bottom: 1rem;
+}
+
+/* Check For Flight Section */
+.flight_available {
+    display: none;
+}
+
+.flight_info p {
+    padding: 0;
+    margin: 0;
+}
+
+/* Personal info */
+.personal_info {
+    display: none;
+}
+
+.home_img {
+    display: block;
+    margin: 2rem auto;
+    width: 14rem;
+}
+
+.text_between {
+    text-align: center;
+    margin-top: 3rem;
+}

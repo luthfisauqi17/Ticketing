@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ticketing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+    // Validation
+    function resetAll() {
+        if(confirm("Reset all?")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
+    function send() {
+        if(confirm("Are you sure to submit it?")) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Body -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h1>Check for a flight</h1>
+                <div id="flight_info" class="flight_info">
+                    <p id="from">From: </p>
+                    <p id="destination">Destination: </p>
+                    <p id="departing">Departing: </p>
+                    <p id="returning">Returning: </p>
+                    <p>Travellers:</p>
+                    <ul>
+                        <li id="adults">Adults: </li>
+                        <li id="children">Children: </li>
+                        <li id="infants">Infants: </li>
+                    </ul>
+                    <p id="preffered_airline">Preffered airline: </p>
+                    <p id="preffered_class">Preffered class: </p>
+                    <p></p>
+                </div>
+                <button id="fillbtn" type="button" class="btn btn-info">Fill the form</button>
+                <button id="checkbtn" type="button" class="btn btn-success">Check a flight</button>
+              </br>
+              </br>
+              <button id="pricing" type="button" class="btn btn-warning"><a style="color: black; text-decoration: none;" href="frame.html">Check the pricing list</a></button>
+            </div>
+            
+            <div class="col-lg-6">
+                <h3>Flight Available</h3>
+                <div id="flight_available" class="flight_available">
+                  <p id="route"></p>
+                  <p id="returned"></p>
+                  <p id="yourplane"></p>
+                  <p id="total"></p>
+                  <button id="personal_info_btn" type="button" class="btn btn-info">Buy ticket</button>
+                </div>
+            </div>
+        </div>
+
+</br>
+</br>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="personal_info" id="personal_info">
+              <h1>Order Your Ticket</h1>
+              <form action="index.php" method="GET" onreset="return resetAll();" onsubmit="return send()">
+                <p>
+                  Full Name: <input type="text" placeholder="" name="full_name">
+                </p>
+                <p>
+                  Nickname: <input type="text" placeholder="" name="name">
+                </p>
+                <p>
+                  Gender:
+                  <input type="radio" name="gender" id="male" value="Sir">Male
+                  <input type="radio" name="gender" id="female" value="Madam">Female
+                </p>
+                <p>
+                  Email: <input type="email" name="email" id="email" placeholder="">
+                </p>
+                <button type="submit" class="btn btn-info">Submit</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</br>
+
+    <script src="scripts.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
